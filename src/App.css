@@ -1,38 +1,202 @@
 .App {
-  text-align: center;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login {
+  width: 500px;
+  height: fit-content;
+  text-align: justify;
+  border: 2px solid rgb(6, 185, 185);
+  border-radius: 5px;
+  padding: 10px 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login h1 {
+  color: darkmagenta;
+}
+
+.login label {
+  font-size: 16px;
+}
+
+.login input {
+  margin: 10px 0 15px;
+  padding: 10px;
+  width: 96%;
+  border: 1px solid rgba(166, 179, 179, 0.9);
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.login button {
+  background-color: rgb(6, 185, 185);
+  border: 2px solid darkcyan;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 25px auto;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.chat-app {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.chat-app header {
+  background-color: rgb(10, 171, 171);
+  color: seashell;
+  text-align: center;
+  font-size: 25px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.users-online {
+  margin: 0;
+  padding: 10px 0 0 10px;
+  flex-basis: 30%;
+  text-align: left;
+  overflow-y: auto;
+  max-height: 120px;
+}
+
+.users-online > h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.users-list {
+  font-size: 14px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  box-sizing: border-box;
+}
+
+.avatar-mini {
+  width: 22px;
+  height: 22px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+header h1 {
+  flex-basis: 30%;
+  padding: 10px;
+}
+
+.chat-app ul li {
+  padding: 10px;
+}
+
+.messages-list {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 100%;
+  max-width: 900px;
+  overflow-y: auto;
+}
+
+.messages-list li {
+  display: flex;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.current-member-position {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+.username {
+  font-weight: bold;
+  color: gray;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: gray;
+  padding: 5px 0;
+}
+
+.current-member-color {
+  background-color: green;
+  border: 1px solid green;
+  border-radius: 13px;
   color: white;
+  display: inline-block;
+  width: max-content;
+  height: max-content;
+  padding: 10px 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.other-member-color {
+  background-color: orange;
+  border: 1px solid orange;
+  border-radius: 13px;
+  color: white;
+  display: inline-block;
+  width: max-content;
+  height: max-content;
+  padding: 10px 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-submit {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  box-sizing: border-box;
+}
+
+.text-submit input {
+  padding: 5px;
+  border: 3px solid rgba(18, 179, 179, 0.7);
+  border-radius: 8px;
+  font-size: 18px;
+  flex-grow: 1;
+}
+
+.text-submit input:focus {
+  border: 3px solid rgba(178, 39, 178, 0.7);
+  outline: none;
+}
+
+.text-submit button {
+  background-color: darkmagenta;
+  border: 1px solid darkmagenta;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin-left: 18px;
+  border-radius: 6px;
 }
